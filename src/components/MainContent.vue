@@ -29,13 +29,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .main {
+  margin: 0 auto;
+  max-width: 860px;
   padding: 50px;
   width: 100%;
   box-sizing: border-box;
   .phone-block-container {
     display: flex;
     justify-content: space-between;
-    width: 80vw;
+    width: 100%;
     background: transparent;
     margin: 0 auto;
   }
