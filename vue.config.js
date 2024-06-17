@@ -23,29 +23,4 @@ module.exports = defineConfig({
       },
     },
   },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, 'src/'),
-        'assets': path.resolve(__dirname, 'src/assets'),
-      },
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192,
-                name: 'img/[name].[hash:8].[ext]',
-              }
-            }
-          ]
-        }
-      ]
-    },
-    // 其他 webpack 配置
-  },
 })
