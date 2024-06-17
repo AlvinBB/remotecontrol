@@ -2,16 +2,17 @@
   <div class="main">
     <div class="phone-block-container">
       <div class="phone-block left-block">
-        <image src="@assets/WechatIMG1.jpg"/>
+        <img class="phone-block-bg" alt="phone" src="../assets/WechatIMG1.jpg"/>
       </div>
       <div class="phone-block right-block">
-        <image alt="phone" :src="phone2"/>
+        <img class="phone-block-bg" alt="phone" :src="phone2"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import phone1 from 'assets/WechatIMG1.jpg'
 import phone2 from 'assets/WechatIMG2.jpg'
 export default {
   name: 'MainContent',
@@ -20,6 +21,7 @@ export default {
   },
   data() {
     return {
+      phone1,
       phone2,
     }
   }
@@ -44,6 +46,10 @@ export default {
     width: 50px;
     height: 200px;
     background: yellow;
+  }
+  .phone-block-bg {
+    width: 100px;
+    height: 100px;
   }
 }
 </style>
