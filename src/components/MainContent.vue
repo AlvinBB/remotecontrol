@@ -2,20 +2,26 @@
   <div class="main">
     <div class="phone-block-container">
       <div class="phone-block left-block">
-        <image src="./assets/WechatIMG1.jpg"/>
+        <image src="@assets/WechatIMG1.jpg"/>
       </div>
       <div class="phone-block right-block">
-        <image src="./assets/WechatIMG1.jpg"/>
+        <image alt="phone" :src="phone2"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import phone2 from 'assets/WechatIMG2.jpg'
 export default {
   name: 'MainContent',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      phone2,
+    }
   }
 }
 </script>
