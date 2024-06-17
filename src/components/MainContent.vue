@@ -1,8 +1,12 @@
 <template>
   <div class="main">
     <div class="phone-block-container">
-      <div class="phone-block left-block"></div>
-      <div class="phone-block right-block"></div>
+      <div class="phone-block left-block">
+        <image src="./assets/WechatIMG1.jpg"/>
+      </div>
+      <div class="phone-block right-block">
+        <image src="./assets/WechatIMG1.jpg"/>
+      </div>
     </div>
   </div>
 </template>
@@ -23,13 +27,15 @@ export default {
   height: 1000px;
   background: #000;
   .phone-block-container {
+    display: flex;
+    justify-content: space-between;
     width: 80vw;
     height: 500px;
     background: red;
     margin: 0 auto;
   }
   .phone-block {
-    width: '40%';
+    width: 50px;
     height: 200px;
     background: yellow;
   }
