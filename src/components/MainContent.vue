@@ -2,18 +2,19 @@
   <div class="main">
     <div class="phone-block-container">
       <div class="phone-block left-block">
-        <img class="phone-block-bg" alt="phone" src="../assets/WechatIMG1.jpg"/>
+        <img class="phone-block-bg" alt="phone" :src="leftSrc"/>
       </div>
       <div class="phone-block right-block">
-        <img class="phone-block-bg" alt="phone" src="../assets/WechatIMG2.jpg"/>
+        <img class="phone-block-bg" alt="phone" :src="rightSrc" @click="onRightClick"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// import phone1 from 'assets/WechatIMG1.jpg'
-// import phone2 from 'assets/WechatIMG2.jpg'
+import left from '../assets/left-bg.jpg'
+import left2 from '../assets/left2.jpg'
+import right from '../assets/right-bg.jpg'
 export default {
   name: 'MainContent',
   props: {
@@ -21,6 +22,13 @@ export default {
   },
   data() {
     return {
+      leftSrc: left,
+      rightSrc: right
+    }
+  },
+  methods: {
+    onRightClick() {
+      this.leftSrc = left2
     }
   }
 }
